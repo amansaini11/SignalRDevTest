@@ -1,0 +1,75 @@
+﻿@model SignalRDevTest.Dal.Entity.DevTest
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="row">
+    <div class="col-md-5">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Create Campaign
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.CampaignName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.TextBoxFor(model => model.CampaignName)
+                                    @Html.ValidationMessageFor(model => model.CampaignName)
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.Date)
+                                    </div>
+                                    @Html.EditorFor(model => model.Date)
+                                    @Html.ValidationMessageFor(model => model.Date)
+                                </div>
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.Clicks)
+                                    </div>
+                                    @Html.EditorFor(model => model.Clicks)
+                                    @Html.ValidationMessageFor(model => model.Clicks)
+                                </div>
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.Conversions)
+                                    </div>
+                                    @Html.EditorFor(model => model.Conversions)
+                                    @Html.ValidationMessageFor(model => model.Conversions)
+                                </div>
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.Impressions)
+                                    </div>
+                                    @Html.EditorFor(model => model.Impressions)
+                                    @Html.ValidationMessageFor(model => model.Impressions)
+                                </div>
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.AffiliateName)
+                                    </div>
+                                    @Html.EditorFor(model => model.AffiliateName)
+                                    @Html.ValidationMessageFor(model => model.AffiliateName)
+                                </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn" value="Create" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+        }
+                </div>
+    </div>
